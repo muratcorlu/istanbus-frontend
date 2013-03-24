@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
 <head>
     <title>Istanbus</title>
@@ -10,7 +9,7 @@
         <h1>Istanbus</h1>
     </header>
 
-    <section>
+    <section id="istanbusApp">
         <nav>
             <ul>
                 <li><a href="/otobus/">Otobus</a></li>
@@ -22,8 +21,8 @@
 
         <section id="tab-contents">
             <section>
-                <input id="search" type="search" placeholder="Hat kodu veya adı" />
-
+                <input id="search" type="search" placeholder="Hat kodu veya adi" />
+                <div id="searchResults"></div>
             </section>
         </section>
     </section>
@@ -33,13 +32,24 @@
     </footer>
 
     <script type="text/template" id="bus-template">
-
         <h2><%=name%></h2>
-
+        <p><%=notes%></p>
+        <ul>
+        <% for (i in timesheet.weekdays.go) { %>
+            <li><%=timesheet.weekdays.go[i]%></li>
+        <% } %>
+        </ul>
     </script>
 
-    <script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
-    <script type="text/javascript" src="js/lib/backbone-min.js"></script>
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+    <script src="js/models/bus.js"></script>
+    <script src="js/collections/buses.js"></script>
+    <script src="js/collections/busSearch.js"></script>
+    <script src="js/views/busView.js"></script>
+    <script src="js/views/app.js"></script>
+    <script src="js/routers/router.js"></script>
+
 </body>
 </html>

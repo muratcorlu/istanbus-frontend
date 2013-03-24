@@ -1,15 +1,14 @@
-/*global Backbone */
+/* global Backbone */
 var app = app || {};
 
 (function () {
     'use strict';
 
     // Bus Model
-    // ----------
 
-    app.Todo = Backbone.Model.extend({
-        // Default attributes for the Bus
-        // and ensure that each todo created has `title` and `completed` keys.
+    app.Bus = Backbone.Model.extend({
+        urlRoot : 'http://api.istanbus.org/bus',
+
         defaults: {
             name: '',
             id: 0
