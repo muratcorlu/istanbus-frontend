@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Istanbus</title>
+</head>
+<body>
+
+    <header>
+        <h1>Istanbus</h1>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="/otobus/">Otobus</a></li>
+                <li><a href="/durak/">Durak</a></li>
+                <li><a href="/nasil-giderim/">Nasil giderim</a></li>
+                <li><a href="/en-yakin-durak/">En yakin durak</a></li>
+            </ul>
+        </nav>
+
+        <section id="tab-contents">
+            <section>
+                <input id="search" type="search" placeholder="Hat kodu veya adı" />
+
+            </section>
+        </section>
+    </section>
+
+    <footer>
+        <p>Istanbus.org</p>
+    </footer>
+
+    <script type="text/template" id="bus-template">
+
+        <h2><%=name%></h2>
+
+    </script>
+
+    <script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="js/lib/backbone-min.js"></script>
+</body>
+</html>
